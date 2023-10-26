@@ -70,7 +70,7 @@ require "sidebar.php";
                                                     echo '<button type="button" class="btn btn-block btn-danger">Error Code : ' . $row["mail_sent"] . '</button>';
                                                 ?>
                                             </td>
-                                            <td><?php echo '<button type="button" class="btn btn-block btn-secondary">' . date("d M, Y H:i", strtotime($row["cTime"])) . '</button>'; ?></td>
+                                            <td><?php echo '<button type="button" class="btn btn-block btn-secondary">' . date("d M, Y H:i a", strtotime($row["cTime"])) . '</button>'; ?></td>
                                         </tr>
                                     <?php
                                     }
