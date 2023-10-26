@@ -1,5 +1,8 @@
 <?php
 
+$db->where("isViewed", "0");
+$new = $db->getValue(TBL_CONTACT, "count(*)");
+
 function getActiveLink($page)
 {
     $current_page = basename($_SERVER['PHP_SELF']);
@@ -47,7 +50,7 @@ function getActiveLink($page)
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="index" class="nav-link <?php getActiveLink("index.php")?>">
+                    <a href="index" class="nav-link <?php getActiveLink("index.php") ?>">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
@@ -55,11 +58,13 @@ function getActiveLink($page)
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="messages" class="nav-link <?php getActiveLink("messages.php")?>">
+                    <a href="messages" class="nav-link <?php getActiveLink("messages.php") ?>">
                         <i class="nav-icon fa fa-envelope"></i>
                         <p>
                             Messages
-                            <span class="right badge badge-danger">New</span>
+                            <?php if ($new != 0) { ?>
+                                <span class="right badge badge-danger">New</span>
+                            <?php } ?>
                         </p>
                     </a>
                 </li>

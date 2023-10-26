@@ -5,6 +5,7 @@ require ".env.table.php";
 require "includes/mysqli-class/MysqliDb.php";
 
 $db = new MysqliDb (DB_HOST, DB_USER, DB_PASS, DB_PREFIX . DB_NAME);
+
 ?>
 
 <!DOCTYPE html>
