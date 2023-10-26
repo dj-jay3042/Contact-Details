@@ -96,6 +96,8 @@ COUNT(*) AS total");
             </div>
             <!-- /.row -->
 
+            <?php 
+            /*
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
@@ -861,6 +863,8 @@ COUNT(*) AS total");
                 <!-- /.col -->
             </div>
             <!-- /.row -->
+            */
+            ?>
         </div><!--/. container-fluid -->
     </section>
     <!-- /.content -->
