@@ -1,0 +1,21 @@
+php_value display_errors On
+php_value mbstring.http_input auto
+php_value date.timezone Asia/Calcutta
+
+ErrorDocument 400 http://contact.dj-jay.great-site.net/index
+ErrorDocument 401 http://contact.dj-jay.great-site.net/index
+ErrorDocument 403 http://contact.dj-jay.great-site.net/index
+ErrorDocument 404 http://contact.dj-jay.great-site.net/index
+ErrorDocument 503 http://contact.dj-jay.great-site.net/index
+
+RewriteEngine On
+
+DirectoryIndex index.php
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^$ $index.php [NC,L]
