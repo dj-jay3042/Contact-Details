@@ -53,7 +53,11 @@ $data = $db->getOne("tblContact");
                                 </div>
                                 <div class="form-group">
                                     <textarea id="compose-textarea" name="body" class="form-control" style="height: 300px">
-                                  <p>I'got your message. I'm intersted in your offer. Can we have a meet as soon as posible?</p>
+                                  <p>I hope this email finds you well. I wanted to express my sincere gratitude for reaching out to me regarding the [Position Name] opportunity. I'm excited to learn more about the position and explore how my skills and experience align with your company's needs.<br>
+First and foremost, I would like to thank you for considering me for this role. I am genuinely interested in joining your team at [Company Name] and contributing to the success of your projects. After reviewing the job description and researching your company, I am even more enthusiastic about the possibility of working together.<br>
+I am eager to discuss the details of the opportunity and learn more about the team's goals and the contributions I can make. Please let me know when it would be convenient for us to schedule a call or meeting. I am flexible with my availability and am happy to accommodate your schedule.<br>
+I have attached my updated resume to this email to provide you with a more comprehensive overview of my qualifications. Feel free to reach out if you need any additional information or if there's any documentation you require from my end.<br>
+Once again, thank you for considering me for the [Position Name] role. I look forward to the next steps in the process and the opportunity to speak with you further.</p>
                                 </textarea>
                                 </div>
                                 <div class="form-group">
@@ -93,7 +97,7 @@ if (isset($_POST["send"])) {
     $mail->addAddress($data["email"], $data["name"]);
 
     // Set the email subject
-    $mail->Subject = $_POST["subject"];
+    $mail->Subject = "Re: " . $_POST["subject"];
 
     // Set the HTML content of the email body
     $mail->Body = '<html>
