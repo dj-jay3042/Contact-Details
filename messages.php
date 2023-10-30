@@ -50,6 +50,7 @@ require "sidebar.php";
                                         <th>Name</th>
                                         <th>Email Address</th>
                                         <th>Message</th>
+                                        <th>Reply</th>
                                         <th>Mail Info</th>
                                         <th>Date & time</th>
                                         <th>Action</th>
@@ -68,6 +69,7 @@ require "sidebar.php";
                                             <td><?php echo $row["name"]; ?></td>
                                             <td><?php echo $row["email"]; ?></td>
                                             <td><?php echo str_replace("\n", "<br>", $row["message"]); ?></td>
+                                            <td><?php echo str_replace("\n", "<br>", $row["reply"]); ?></td>
                                             <td>
                                                 <?php
                                                 if ($row["mail_sent"] == 1)
@@ -99,6 +101,7 @@ require "sidebar.php";
                                         <th>Name</th>
                                         <th>Email Address</th>
                                         <th>Message</th>
+                                        <th>Reply</th>
                                         <th>Mail Info</th>
                                         <th>Date & time</th>
                                         <th>Action</th>
