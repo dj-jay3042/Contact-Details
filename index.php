@@ -75,7 +75,7 @@ COUNT(*) AS total");
 
                 <div class="col-12 col-sm-6 col-md-3">
                     <div class="info-box mb-3">
-                        <span class="info-box-icon bg-warning elevation-1"><i class="fa fa-envelope-square"></i></span>
+                        <span class="info-box-icon bg-danger elevation-1"><i class="fa fa-envelope-square"></i></span>
 
                         <div class="info-box-content">
                             <span class="info-box-text">Mail Not Sent</span>
@@ -88,7 +88,7 @@ COUNT(*) AS total");
                 <!-- /.col -->
                 <div class="col-12 col-sm-6 col-md-3">
                     <div class="info-box mb-3">
-                        <span class="info-box-icon bg-info elevation-1"><i class="fa fa-comment"></i></span>
+                        <span class="info-box-icon bg-warning elevation-1"><i class="fa fa-comment"></i></span>
 
                         <div class="info-box-content">
                             <span class="info-box-text">Reply Through Mail</span>
