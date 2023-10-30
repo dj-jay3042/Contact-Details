@@ -12,7 +12,7 @@ require "sidebar.php";
 $data = $db->get(TBL_CONTACT, 1, "
 SUM(CASE WHEN mail_sent = '0' THEN 1 ELSE 0 END) AS sent,
 SUM(CASE WHEN mail_sent = '1' THEN 1 ELSE 0 END) AS notsent,
-SUM(CASE WHEN mail_sent NOT IN ('0', '1') THEN 1 ELSE 0 END) AS error,
+SUM(CASE WHEN isReplied = '1' THEN 1 ELSE 0 END) AS replied,
 COUNT(*) AS total");
 
 ?>
@@ -62,7 +62,7 @@ COUNT(*) AS total");
 
                         <div class="info-box-content">
                             <span class="info-box-text">Mail Sent Successfully</span>
-                            <span class="info-box-number"><?= $data[0]["sent"];?></span>
+                            <span class="info-box-number"><?= $data[0]["replied"];?></span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -88,11 +88,11 @@ COUNT(*) AS total");
                 <!-- /.col -->
                 <div class="col-12 col-sm-6 col-md-3">
                     <div class="info-box mb-3">
-                        <span class="info-box-icon bg-danger elevation-1"><i class="fa fa-exclamation-triangle"></i></span>
+                        <span class="info-box-icon bg-info elevation-1"><i class="fa fa-comment"></i><sup><small><small><i class="fa fa-exclamation" style="color: red;"></i></small></small></sup></span>
 
                         <div class="info-box-content">
-                            <span class="info-box-text">Error in sending Mail</span>
-                            <span class="info-box-number"><?= $data[0]["error"];?></span>
+                            <span class="info-box-text">Reply Panding</span>
+                            <span class="info-box-number"><?= $data[0]["sent"];?></span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
