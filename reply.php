@@ -269,6 +269,10 @@ if (isset($_POST["send"])) {
 
     $db->where("id", $_GET["id"]);
     $id = $db->update(TBL_CONTACT, $data);
-    header("Location: /messages");
+    ?>
+    <script>
+        window.location.href = "messages";
+    </script>
+    <?php
 }
 ?>
