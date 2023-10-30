@@ -91,7 +91,7 @@ COUNT(*) AS total");
                         <span class="info-box-icon bg-info elevation-1"><i class="fa fa-comment"></i><sup><small><small><i class="fa fa-exclamation" style="color: red;"></i></small></small></sup></span>
 
                         <div class="info-box-content">
-                            <span class="info-box-text">Reply Panding</span>
+                            <span class="info-box-text">Reply Through Mail</span>
                             <span class="info-box-number"><?= $data[0]["sent"];?></span>
                         </div>
                         <!-- /.info-box-content -->
