@@ -125,7 +125,7 @@ require "sidebar.php";
 
 <?php
 
+require "footer.php";
 $db->where("isViewed", "0");
 $db->update(TBL_CONTACT, array("isViewed" => "1"));
 
-require "footer.php";
