@@ -48,7 +48,7 @@ COUNT(*) AS total");
                         <div class="info-box-content">
                             <span class="info-box-text">Total Messages</span>
                             <span class="info-box-number">
-                                <?php echo $data[0]["total"];?>
+                                <?= $data[0]["total"];?>
                             </span>
                         </div>
                         <!-- /.info-box-content -->
@@ -62,7 +62,7 @@ COUNT(*) AS total");
 
                         <div class="info-box-content">
                             <span class="info-box-text">Mail Sent Successfully</span>
-                            <span class="info-box-number"><?php echo $data[0]["sent"];?></span>
+                            <span class="info-box-number"><?= $data[0]["sent"];?></span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -79,7 +79,7 @@ COUNT(*) AS total");
 
                         <div class="info-box-content">
                             <span class="info-box-text">Mail Not Sent</span>
-                            <span class="info-box-number"><?php echo $data[0]["notsent"];?></span>
+                            <span class="info-box-number"><?= $data[0]["notsent"];?></span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -92,7 +92,7 @@ COUNT(*) AS total");
 
                         <div class="info-box-content">
                             <span class="info-box-text">Error in sending Mail</span>
-                            <span class="info-box-number"><?php echo $data[0]["error"];?></span>
+                            <span class="info-box-number"><?= $data[0]["error"];?></span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>

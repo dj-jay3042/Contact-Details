@@ -65,11 +65,11 @@ require "sidebar.php";
                                         $count++;
                                     ?>
                                         <tr>
-                                            <td><?php echo $count; ?></td>
-                                            <td><?php echo $row["name"]; ?></td>
-                                            <td><?php echo $row["email"]; ?></td>
-                                            <td><?php echo str_replace("\n", "<br>", $row["message"]); ?></td>
-                                            <td><?php echo str_replace("\n", "<br>", $row["reply"]); ?></td>
+                                            <td><?= $count; ?></td>
+                                            <td><?= $row["name"]; ?></td>
+                                            <td><?= $row["email"]; ?></td>
+                                            <td><?= str_replace("\n", "<br>", $row["message"]); ?></td>
+                                            <td><?= (!empty($row["reply"])) ? (str_replace("\n", "<br>", $row["reply"])) : ('<span class="right badge badge-danger">Reply Panding</span>'); ?></td>
                                             <td>
                                                 <?php
                                                 if ($row["mail_sent"] == 1)
@@ -89,7 +89,7 @@ require "sidebar.php";
                                                     ?>
                                                 </button>
                                             </td>
-                                            <td><a href="reply/id/<?php echo $row["id"]?>"><button type="button" class="btn btn-block btn-outline-light">Reply</button></a></td>
+                                            <td><?php if ($row["isReplied"] == "0") { ?><a href="reply/id/<?= $row["id"]?>"><button type="button" class="btn btn-block btn-outline-light">Reply</button></a><?php } else { echo '<span class="right badge badge-success">Reply Sent</span>'; }?></td>
                                         </tr>
                                     <?php
                                     }
