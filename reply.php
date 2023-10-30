@@ -262,7 +262,7 @@ if (isset($_POST["send"])) {
 
     // Insert into DB
     $data = array(
-        "reply" => $message,
+        "reply" => trim($message),
         "isReplied" => $replied,
         "hasAttachment" => isset($_FILES["attachment"]) ? "1" : "0"
     );
