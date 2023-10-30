@@ -2,8 +2,8 @@
 
 session_start();
 if (($_SESSION["login"] != true)) {
-  header("Location: login.php");
-  exit();
+    header("Location: login.php");
+    exit();
 }
 
 require "header.php";
@@ -32,6 +32,7 @@ require "sidebar.php";
 
     <!-- Main content -->
     <section class="content">
+
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
@@ -51,6 +52,7 @@ require "sidebar.php";
                                         <th>Message</th>
                                         <th>Mail Info</th>
                                         <th>Date & time</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -76,13 +78,16 @@ require "sidebar.php";
                                                     echo '<button type="button" class="btn btn-block btn-danger">Error Code : ' . $row["mail_sent"] . '</button>';
                                                 ?>
                                             </td>
-                                            <td><button type="button" class="btn btn-block btn-secondary"> 
-                                                <?php
+                                            <td>
+                                                <button type="button" class="btn btn-block btn-secondary">
+                                                    <?php
                                                     $originalTime = new DateTime($row["cTime"], new DateTimeZone('America/New_York'));
                                                     $originalTime->setTimezone(new DateTimeZone('Asia/Kolkata'));
                                                     echo  $originalTime->format('d M, Y h:i a');
-                                                ?> 
-                                            </button></td>
+                                                    ?>
+                                                </button>
+                                            </td>
+                                            <td><a href="reply/id/<?php echo $row["id"]?>"><button type="button" class="btn btn-block btn-outline-light">Reply</button></a></td>
                                         </tr>
                                     <?php
                                     }
@@ -96,6 +101,7 @@ require "sidebar.php";
                                         <th>Message</th>
                                         <th>Mail Info</th>
                                         <th>Date & time</th>
+                                        <th>Action</th>
                                     </tr>
                                 </tfoot>
                             </table>
