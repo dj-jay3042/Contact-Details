@@ -88,7 +88,7 @@ COUNT(*) AS total");
                 <!-- /.col -->
                 <div class="col-12 col-sm-6 col-md-3">
                     <div class="info-box mb-3">
-                        <span class="info-box-icon bg-info elevation-1"><i class="fa fa-comment"></i><sup><small><small><i class="fa fa-exclamation" style="color: red;"></i></small></small></sup></span>
+                        <span class="info-box-icon bg-info elevation-1"><i class="fa fa-comment"></i></span>
 
                         <div class="info-box-content">
                             <span class="info-box-text">Reply Through Mail</span>
