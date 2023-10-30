@@ -89,7 +89,7 @@ require "sidebar.php";
                                                     ?>
                                                 </button>
                                             </td>
-                                            <td><?php if ($row["isReplied"] == "0") { ?><a href="reply/id/<?= $row["id"]?>"><button type="button" class="btn btn-block btn-outline-light">Reply</button></a><?php } else { echo '<span class="right badge badge-success">Reply Sent</span>'; }?></td>
+                                            <td><?php if ($row["isReplied"] == "0") { ?><a href="reply?id=<?= $row["id"]?>"><button type="button" class="btn btn-block btn-outline-light">Reply</button></a><?php } else { echo '<span class="right badge badge-success">Reply Sent</span>'; }?></td>
                                         </tr>
                                     <?php
                                     }
