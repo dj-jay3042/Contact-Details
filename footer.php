@@ -1,11 +1,11 @@
 <!-- Main Footer -->
 <footer class="main-footer">
-    <strong>Copyright &copy; <?php date("Y") ?> <a href="http://rasume-jay.dj-jay.great-site.net/" target="_blank">Jay Chauhan</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 1.0.0
-    </div>
-  </footer>
+  <strong>Copyright &copy; <?php date("Y") ?> <a href="http://rasume-jay.dj-jay.great-site.net/" target="_blank">Jay Chauhan</a>.</strong>
+  All rights reserved.
+  <div class="float-right d-none d-sm-inline-block">
+    <b>Version</b> 1.0.0
+  </div>
+</footer>
 </div>
 <!-- ./wrapper -->
 
@@ -48,21 +48,33 @@
 <script src="plugins/toastr/toastr.min.js"></script>
 <!-- Summernote -->
 <script src="plugins/summernote/summernote-bs4.min.js"></script>
-<script>
-  $(function () {
+<!-- Idle Timeout -->
+<script src="plugins/jquery-idle-timeout/jquery.idletimer.js"></script>
+<script src="plugins/jquery-idle-timeout/store.min.js"></script>
+<script src="dist/js/idle-timer.js"></script>
+<script >
+  $(function() {
     $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "responsive": true,
+      "lengthChange": false,
+      "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
   });
 </script>
-<script>
-  $(function () {
+<script >
+  $(function() {
     //Add text editor
     $('#compose-textarea').summernote()
   })
 </script>
+<script >
+  jQuery(document).ready(function() {
+    IdleTimeout.init(); // initialize session timeout settings
+  });
+</script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard2.js"></script>
 </body>
+
 </html>
