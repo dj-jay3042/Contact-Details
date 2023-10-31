@@ -62,7 +62,7 @@ COUNT(*) AS total");
 
                         <div class="info-box-content">
                             <span class="info-box-text">Mail Sent Successfully</span>
-                            <span class="info-box-number"><?= $data[0]["replied"];?></span>
+                            <span class="info-box-number"><?= $data[0]["sent"];?></span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -92,7 +92,7 @@ COUNT(*) AS total");
 
                         <div class="info-box-content">
                             <span class="info-box-text">Reply Through Mail</span>
-                            <span class="info-box-number"><?= $data[0]["sent"];?></span>
+                            <span class="info-box-number"><?= $data[0]["replied"];?></span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
