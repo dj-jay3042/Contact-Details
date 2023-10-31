@@ -10,8 +10,8 @@ require "header.php";
 require "sidebar.php";
 
 $data = $db->get(TBL_CONTACT, 1, "
-SUM(CASE WHEN mail_sent = '0' THEN 1 ELSE 0 END) AS sent,
-SUM(CASE WHEN mail_sent = '1' THEN 1 ELSE 0 END) AS notsent,
+SUM(CASE WHEN mail_sent = '0' THEN 1 ELSE 0 END) AS notsent,
+SUM(CASE WHEN mail_sent = '1' THEN 1 ELSE 0 END) AS sent,
 SUM(CASE WHEN isReplied = '1' THEN 1 ELSE 0 END) AS replied,
 COUNT(*) AS total");
 
