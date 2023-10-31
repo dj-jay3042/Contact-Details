@@ -264,7 +264,7 @@ if (isset($_POST["send"])) {
     $data = array(
         "reply" => trim($message),
         "isReplied" => $replied,
-        "hasAttachment" => isset($_FILES["attachment"]) ? "1" : "0"
+        "hasAttachment" => !empty($_FILES["attachment"]) ? "1" : "0"
     );
 
     $db->where("id", $_GET["id"]);
