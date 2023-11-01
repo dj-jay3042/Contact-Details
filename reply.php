@@ -100,145 +100,249 @@ if (isset($_POST["send"])) {
     $mail->Subject = "Re: " . $_POST["subject"];
 
     // Set the HTML content of the email body
-    $mail->Body = '<html>
-<head>
-    <title>' . $_POST["subject"] . '</title>
-    <style>
-        .card-header {
-            --bs-blue: #0d6efd;
-            --bs-indigo: #6610f2;
-            --bs-purple: #6f42c1;
-            --bs-pink: #d63384;
-            --bs-red: #dc3545;
-            --bs-orange: #fd7e14;
-            --bs-yellow: #ffc107;
-            --bs-green: #198754;
-            --bs-teal: #20c997;
-            --bs-cyan: #0dcaf0;
-            --bs-white: #fff;
-            --bs-gray: #6c757d;
-            --bs-gray-dark: #343a40;
-            --bs-primary: #0d6efd;
-            --bs-secondary: #6c757d;
-            --bs-success: #198754;
-            --bs-info: #0dcaf0;
-            --bs-warning: #ffc107;
-            --bs-danger: #dc3545;
-            --bs-light: #f8f9fa;
-            --bs-dark: #212529;
-            --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-            font-family: var(--bs-font-sans-serif);
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5;
-            color: #212529;
-            -webkit-text-size-adjust: 100%;
-            -webkit-tap-highlight-color: transparent;
-            word-wrap: break-word;
-            box-sizing: border-box;
-            padding: .5rem 1rem;
-            margin-bottom: 0;
-            background-color: rgba(0, 0, 0, .03);
-            border-bottom: 1px solid rgba(0, 0, 0, .125);
-            border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
-        }
-
-        .card-body {
-            --bs-blue: #0d6efd;
-            --bs-indigo: #6610f2;
-            --bs-purple: #6f42c1;
-            --bs-pink: #d63384;
-            --bs-red: #dc3545;
-            --bs-orange: #fd7e14;
-            --bs-yellow: #ffc107;
-            --bs-green: #198754;
-            --bs-teal: #20c997;
-            --bs-cyan: #0dcaf0;
-            --bs-white: #fff;
-            --bs-gray: #6c757d;
-            --bs-gray-dark: #343a40;
-            --bs-primary: #0d6efd;
-            --bs-secondary: #6c757d;
-            --bs-success: #198754;
-            --bs-info: #0dcaf0;
-            --bs-warning: #ffc107;
-            --bs-danger: #dc3545;
-            --bs-light: #f8f9fa;
-            --bs-dark: #212529;
-            --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-            font-family: var(--bs-font-sans-serif);
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5;
-            color: #212529;
-            -webkit-text-size-adjust: 100%;
-            -webkit-tap-highlight-color: transparent;
-            word-wrap: break-word;
-            box-sizing: border-box;
-            flex: 1 1 auto;
-            padding: 1rem 1rem;
-        }
-
-        .card-footer {
-            --bs-blue: #0d6efd;
-            --bs-indigo: #6610f2;
-            --bs-purple: #6f42c1;
-            --bs-pink: #d63384;
-            --bs-red: #dc3545;
-            --bs-orange: #fd7e14;
-            --bs-yellow: #ffc107;
-            --bs-green: #198754;
-            --bs-teal: #20c997;
-            --bs-cyan: #0dcaf0;
-            --bs-white: #fff;
-            --bs-gray: #6c757d;
-            --bs-gray-dark: #343a40;
-            --bs-primary: #0d6efd;
-            --bs-secondary: #6c757d;
-            --bs-success: #198754;
-            --bs-info: #0dcaf0;
-            --bs-warning: #ffc107;
-            --bs-danger: #dc3545;
-            --bs-light: #f8f9fa;
-            --bs-dark: #212529;
-            --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-            font-family: var(--bs-font-sans-serif);
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5;
-            -webkit-text-size-adjust: 100%;
-            -webkit-tap-highlight-color: transparent;
-            word-wrap: break-word;
-            box-sizing: border-box;
-            padding: .5rem 1rem;
-            background-color: rgba(0, 0, 0, .03);
-            border-top: 1px solid rgba(0, 0, 0, .125);
-            color: #6c757d !important;
-            border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);
-        }
-    </style>
-</head>
-<body>
-    <div class="card">
-        <div class="card-header">
-            Dear ' . $data["name"] . '
-        </div>
-        <div class="card-body">
-          ' . $_POST["body"] . '
-        </div>
-        <div class="card-footer text-muted">
-            Warm regards,<br>
-            Jay Chauhan
-        </div>
-      </div>
-</body>
-</html>';
+    $mail->Body = '<html><!-- START HEAD -->
+    <head>
+        
+        <!-- CHARSET -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <!-- MOBILE FIRST -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        
+        <!-- GOOGLE FONTS -->
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- RESPONSIVE CSS -->
+        <style type="text/css">
+            @media only screen and (max-width: 550px){
+                .responsive_at_550{
+                    width: 90% !important;
+                    max-width: 90% !important;
+                }
+            }
+        </style>
+    
+    </head>
+    <!-- END HEAD -->
+    
+    <!-- START BODY -->
+    <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+        
+        <!-- START EMAIL CONTENT -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">        
+            <tbody>
+                
+                <tr>
+                    
+                    <td align="center" bgcolor="#1976D2">
+                        
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                            <tbody>
+                                <tr>
+                                    <td width="100%" align="center">
+                                        
+                                        <!-- START SPACING -->
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <td height="40">&nbsp;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- END SPACING -->
+                                        
+                                        <!-- START CONTENT -->
+                                        <table width="500" border="0" cellpadding="0" cellspacing="0" align="center" style="padding-left:20px; padding-right:20px;" class="responsive_at_550">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center" bgcolor="#ffffff">
+                                                        
+                                                        <!-- START BORDER COLOR -->
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="100%" height="7" align="center" border="0" bgcolor="#03a9f4"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- END BORDER COLOR -->
+                                                        
+                                                        <!-- START SPACING -->
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td height="30">&nbsp;</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- END SPACING -->
+                                                        
+                                                        <!-- START HEADING -->
+                                                        <table width="90%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="100%" align="left">
+                                                                        <h1 style="font-family:\'Ubuntu Mono\', monospace; font-size:20px; color:#202020; font-weight:bold; padding-left:20px; padding-right:20px;">Dear ' . $data["name"] . '</h1>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- END HEADING -->
+                                                        
+                                                        <!-- START PARAGRAPH -->
+                                                        <table width="90%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="100%" align="center" style="font-family:\'Ubuntu\', sans-serif; font-size:14px; color:#202020; padding-left:20px; padding-right:20px; text-align:justify;">
+                                                                        <p>' . $_POST["body"] . '</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- END PARAGRAPH -->
+                                                        
+                                                        <!-- START SPACING -->
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td height="30">&nbsp;</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- END SPACING -->
+                                                        
+                                                        <!-- START BORDER COLOR -->
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="100%" height="7" align="center" border="0" bgcolor="#03a9f4"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- END BORDER COLOR -->
+                                                        <br>
+                                                        <!-- START BUTTON -->
+                                                        <table width="200" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="center" bgcolor="#1976D2">
+                                                                        <a style="font-family:\'Ubuntu Mono\', monospace; display:block; color:#ffffff; font-size:14px; font-weight:bold; text-decoration:none; padding-left:20px; padding-right:20px; padding-top:20px; padding-bottom:20px;" href="http://rasume-jay.dj-jay.great-site.net/" target="_blank">Portfolio Site</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- END BUTTON -->
+                                                        
+                                                        <!-- START SPACING -->
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td height="30">&nbsp;</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- END SPACING -->
+                                                        
+                                                        <!-- START PARAGRAPH -->
+                                                        <table width="90%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="100%" align="center">
+                                                                        <p style="font-family:\'Ubuntu\', sans-serif; font-size:14px; color:#202020; padding-left:20px; padding-right:20px; text-align:justify;">If the above button doesn\'t work, you can visit site by clicking the following link, <a href="http://rasume-jay.dj-jay.great-site.net/" target="_blank">Link</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- END PARAGRAPH -->
+                                                        
+                                                        <!-- START SPACING -->
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td height="30">&nbsp;</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- END SPACING -->
+                                                        
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- END CONTENT -->
+                                        
+                                        <!-- START SPACING -->
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <td height="20">&nbsp;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- END SPACING -->
+                                        
+                                        <!-- START SOCIAL MEDIA ICONS -->
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="100%" align="center">
+                                                        <a href="http://rasume-jay.dj-jay.great-site.net/" target="_blank"><i: class="fa fa-laptop" style="color: white;"></i:></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <a href="https://www.linkedin.com/in/jay-chauhan-7b4606234" target="_blank"><i class="fa fa-linkedin" style="color: white;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <a href="tel:+919313440532" target="_blank"><i: class="fa fa-phone" style="color: white;"></i:></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <a href="https://join.skype.com/invite/qCRS3mNfWaC0" target="_blank"><i: class="fa fa-skype" style="color: white;"></i:></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- END SOCIAL MEDIA ICONS -->
+                                        
+                                        <!-- START SPACING -->
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <td height="5">&nbsp;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- END SPACING -->
+                                        
+                                        <!-- START FOOTER -->
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="100%" align="center" style="padding-left:15px; padding-right:15px;">
+                                                        <p style="font-family:\'Ubuntu Mono\', monospace; color:#ffffff; font-size:12px;">Jay Chauhan &copy; ' 
+                                                        . date("Y") . ', All Rights Reserved</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- END FOOTER -->
+                                        
+                                        <!-- START SPACING -->
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <td height="40">&nbsp;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- END SPACING -->  
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>        
+        </table>
+        <!-- END EMAIL CONTENT -->
+    </body>
+    <!-- END BODY --></html>';
     $message = $_POST["body"];
 
     // Add attachment
